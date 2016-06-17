@@ -17,7 +17,21 @@ def get_contribution_days_for_user(username):
   return data
 
 def get_streak_for_user(username):
-  data = get_contribution_days_for_user(username)
+  data = get_contributions_for_user(username)
+
+  contribs = []
+  offset = len("data-count=")
+  for line in data:
+    idx = line.find("data-count=") + offset + 1
+    line = line[idx:]
+    idx = line.find('"')
+    contribs.append(int(line[:idx]))
+
+  streak = 0
+  while contribs.pop() != 0:
+    streak += 1
+
+  return streak
 
 if __name__ == '__main__':
-  get_contribution_days_for_user("csu")
+  print get_streak_for_user("csu")
