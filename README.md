@@ -1,14 +1,20 @@
 # gh-streak
 
-A Python library and API for fetching GitHub streaks.
+A Python library, CLI, and API for fetching GitHub contribution streaks.
 
-## Python
-### Installation
+## Installation
 ```bash
 pip install ghstreak
 ```
 
-### Usage
+## Usage
+### CLI
+```bash
+# Get the current streak for csu
+ghstreak csu
+```
+
+### Python Library
 ```python
 import ghstreak
 
