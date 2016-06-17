@@ -17,14 +17,14 @@ pip install ghstreak
 ```
 
 ## API
-### Installation
-```bash
-cd api
-pip install -r requirements.txt
-```
-
 ### Usage
 ```bash
-cd api
+# In the api directory
 python server.py
+```
+
+### Installation
+```bash
+# In the api directory
+pip install -r requirements.txt
 ```
