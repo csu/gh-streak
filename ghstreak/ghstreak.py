@@ -31,10 +31,16 @@ def get_streak_for_user(username):
     date = datetime.strptime(parts[2], "%Y-%m-%d")
     contribs.append((count, date))
 
+  if not contribs:
+    return 'error'
+
   # remove dates in the future
   cur = contribs.pop()
   while cur[1] >= datetime.today():
     cur = contribs.pop()  
+
+  if not contribs:
+      return 'error'
 
   # count current streak
   streak = 0
