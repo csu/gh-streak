@@ -22,7 +22,7 @@ import ghstreak
 ghstreak.get_streak_for_user('csu')
 ```
 
-## API
+## HTTP API
 ### Installation
 ```bash
 # In the api directory
