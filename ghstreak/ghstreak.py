@@ -57,4 +57,4 @@ def get_streak_for_user(username):
   return streak
 
 if __name__ == '__main__':
-  print get_streak_for_user("csu")
+  print(get_streak_for_user("csu"))
