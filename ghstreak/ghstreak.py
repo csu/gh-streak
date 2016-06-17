@@ -1,8 +1,12 @@
 from datetime import datetime
 
 import requests
+
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+import logging
+logging.getLogger("requests").setLevel(logging.ERROR)
+logging.getLogger("urllib3").setLevel(logging.ERROR)
 
 # returns raw calendar data
 def get_contributions_for_user(username):
