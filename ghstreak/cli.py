@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import sys
 
-import ghstreak
+from . import ghstreak
 
 def main():
   if len(sys.argv) != 2:
