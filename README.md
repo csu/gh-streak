@@ -24,7 +24,8 @@ ghstreak.get_streak_for_user('csu')
 
 ### HTTP API
 ```bash
-# In the api directory
+git clone git@github.com:csu/gh-streak.git
+cd api
 pip install -r requirements.txt
 python server.py
 ```
