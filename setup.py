@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
   name='ghstreak',
-  version='0.1.2',
+  version='0.1.3',
   description='A Python library for fetching GitHub contribution streaks.',
   author='Christopher Su',
   author_email='chris+py@christopher.su',
