@@ -1,6 +1,8 @@
 from datetime import datetime
 
 import requests
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 # returns raw calendar data
 def get_contributions_for_user(username):

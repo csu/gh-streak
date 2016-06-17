@@ -10,5 +10,8 @@ setup(
   packages=['ghstreak'],
   install_requires=[
     "requests==2.10.0"
-  ]
+  ],
+  entry_points = {
+      'console_scripts': ['ghstreak=ghstreak.cli:main'],
+  }
 )
