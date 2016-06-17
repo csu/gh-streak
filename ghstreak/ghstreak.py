@@ -1,3 +1,5 @@
+from datetime import datetime
+
 import requests
 
 # returns raw calendar data
@@ -24,12 +26,21 @@ def get_streak_for_user(username):
   for line in data:
     idx = line.find("data-count=") + offset + 1
     line = line[idx:]
-    idx = line.find('"')
-    contribs.append(int(line[:idx]))
+    parts = line.split('"')
+    count = int(parts[0])
+    date = datetime.strptime(parts[2], "%Y-%m-%d")
+    contribs.append((count, date))
 
+  # remove dates in the future
+  cur = contribs.pop()
+  while cur[1] >= datetime.today():
+    cur = contribs.pop()  
+
+  # count current streak
   streak = 0
-  while contribs.pop() != 0:
+  while cur[0] != 0:
     streak += 1
+    cur = contribs.pop()
 
   return streak
 
