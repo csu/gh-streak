@@ -1,3 +1,3 @@
 # gh-streak
 
-A Python library for fetching GitHub streaks.
+A Python library and API for fetching GitHub streaks.
