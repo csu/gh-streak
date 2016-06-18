@@ -34,4 +34,4 @@ python server.py
 Pull requests and issues are welcome.
 
 ### Maintainers
-* [Christopher Su](https://christopher.su) ([@csu](https://github.com/csu))
+* [Christopher Su](https://christopher.su) ([csu](https://github.com/csu))
