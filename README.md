@@ -29,3 +29,9 @@ cd api
 pip install -r requirements.txt
 python server.py
 ```
+
+## Contributing
+Pull requests and issues are welcome.
+
+### Maintainers
+* [Christopher Su](https://christopher.su) ([@csu](https://github.com/csu))
